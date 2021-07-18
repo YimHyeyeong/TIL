@@ -4,6 +4,8 @@
 
 ---
 
+### 저장, 조건, 반복
+
 * 주의할 것 
 
   1. 대/소문자
@@ -78,13 +80,11 @@
 
 
 
-
-
-## GIT
-
 ---
 
 
+
+### GIT
 
 - GIT 
   - (분산)버전 관리 시스템. 코드의 히스토리를 관리하는 도구. 
@@ -95,7 +95,7 @@
   - add 커밋할 목록에 추가
   - Commit 커밋(create a snapshot) 만들기
   - push 현재까지의 역사 (commits)가 기록되어 있는 곳에 새로 생성한 커밋들 반영하기
-  - ![image-20210718130209342](0715 수업정리.assets/image-20210718130209342.png)
+  - ![image-20210718224611271](~0715 GIT, Web Crawling, API.assets/image-20210718224611271.png)
 - 기본 명령어
   - git init : 폴더안에 init을 선언하면 .git이라는 폴더가 생성되면서 공간이 생김. 이것은 이제 git이 관리한다는 뜻
   
@@ -127,11 +127,11 @@
 
 -----
 
-
+### Web crawling
 
 * Web crawling: 조직적, 자동화된 방법으로 웹을 탐색하는 것.
 
-![image-20210718152109962](0715 수업정리.assets/image-20210718152109962.png)
+![image-20210718224621884](~0715 GIT, Web Crawling, API.assets/image-20210718224621884.png)
 
 + import requests
 
