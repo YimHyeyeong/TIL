@@ -50,11 +50,27 @@
   {{variable|filter}}
   ```
 
-  > `|`앞뒤로 띄우쓰기 금지
+  > `|`앞뒤로 띄워쓰기 금지
 
   * 표시할 변수를 수정할 때 사용
+
+    + ex) name 변수를 모두 소문자로 출력
+
+      ```
+      {{ name|lower }}
+      ```
+
   * 60 개의 built in template filters 를 제공
+
   * `chained `가 가능하며 일부 필터는 인자를 받기도 함
+
+    ```
+    {{ variable|truncatewords:30 }}
+    ```
+
+    
+
+  
 
 * DTL Syntax - Tags
 
@@ -75,7 +91,7 @@
   ```
 
   * django template 에서 라인의 주석을 표현하기 위해 사용
-  * 아래처럼 유효하지 않은 템플릿 코드가 포함될 수 있음
+  * 유효하지 않은 템플릿 코드가 포함될 수 있음
   * 한 줄 주석에만 사용할 수 있음, 줄 바꿈이 허용되지 않음
   * 여러 줄 주석은 {% comment%} 와 {% endcomment %}사이에 위치
 
@@ -107,14 +123,46 @@
   * 하위 템플릿에서 재지정 ( overriden )할 수 있는 블록을 정의
   * 즉 , 하위 템플릿이 채울 수 있는 공간
 
+* 상속 실습
+
+  ```
+  TEMPLATES ={
+  	...
+  	'DIRS':[BASE_DIR/'templates']
+  	...
+  }
+  ```
+
+  ```
+  ./tempates/base.html
+  
+  <body>
+  	<div></div>
+  	{% block content %}
+  	{% endblock %}
+  </body>
+  ```
+
+  ```
+  index.html
+  
+  {% extends 'base.html'%}
+  
+  {% block content %}
+  	<h1></h1>
+  {%endblock%}
+  ```
+
+  
+
 * Django template system (feat.django 설계 철학)
 
   * “표현과 로직 ( view) 을 분리”
 
-    * 템플릿 시스템은 표현을 제어하는 도구이자 표현에 관련된 로직일 뿐dl라고 생각한다
+    * 템플릿 시스템은 표현을 제어하는 도구이자 표현에 관련된 로직일 뿐이라고 생각한다
     * 즉 , 템플릿 시스템은 이러한 기본 목표를 넘어서는 기능을 지원하지 말아야 한다
 
-  * •“중복을 배제”
+  * “중복을 배제”
 
     * 대다수의 동적 웹사이트는 공통 header, footer, navbar 같은 사이트 공통 디자인을 갖는다
     * Django 템플릿 시스템은 이러한 요소를 한 곳에 저장하기 쉽게 하여 중복 코드를 없애야 한다

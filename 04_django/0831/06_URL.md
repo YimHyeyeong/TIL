@@ -37,12 +37,36 @@
   * include()
     * 다른 URLconf (app1/urls. 들을 참조할 수 있도록 도움
     * 함수 include() 를 만나게 되면 , URL 의 그 시점까지 일치하는 부분을 잘라내고 , 남은 문자열 부분을 후속 처리를 위해 include 된 URLconf 로 전달
+    
+    ```
+    url.py
+    
+    from django.contrib import admin
+    from django.urls import path, include
+    
+    urlpattern = [
+    	path('articles/', include('articles.urls'))
+    ]
+    ```
+    
+    + urlpattern은 언제든지 다른 `URLconf` 모듈을 포함할 수 있음
+    
   * django 는 명시적 상대경로 `(from .module import ..)` 를 권장
 
 * Naming URL patterns
 
-  * 이제는 링크에 url 을 직접 작성하는 것이 아니라 path() 함수의 name 인자를 정의해서 사용
+  * 이제는 링크에 url 을 직접 작성하는 것이 아니라 path() 함수의 `name` 인자를 정의해서 사용
+
   * Django Template Tag 중 하나인 url 태그를 사용해서 path() 함수에 작성한 name 을 사용할 수 있음
+
+    ```
+    path('index/', views.index, name='index')
+    ```
+
+    ```
+    <a href="{% url 'index' %}">home</a>
+    ```
+
   * url 설정에 정의된 특정한 경로들의 의존성을 제거할 수 있음
 
 * url template tag
@@ -52,3 +76,4 @@
   ```
 
   * 주어진 URL 패턴 이름 및 선택적 매개 변수와 일치하는 절대 경로 주소를 반환
+  * 템플릿에 URL을 하드 코딩하지 않고도 [DRY 원칙](https://docs.djangoproject.com/ko/3.2/misc/design-philosophies/#don-t-repeat-yourself-dry)을 위반하지 않으면서 링크를 출력하는 방법

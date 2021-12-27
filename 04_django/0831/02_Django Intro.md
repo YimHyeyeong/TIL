@@ -1,11 +1,41 @@
 ## Django Intro
 
 * Django 시작하기
-  1. 가상환경 생성: `python -m venv venv `
-  2. 가상환경 활성화: `source venv/Scripts/activate`
-  3. pip list 확인
-  4. `pip install django`
-  5. 프로젝트 폴더 생성 : `django-admin startproject config .`
+  1. 가상환경 생성 
+  
+     ````
+     $ python -m venv venv 
+     ````
+  
+  2. 가상환경 활성화
+  
+     ```
+     $ source venv/Scripts/activate
+     ```
+  
+  3. ```
+     $ pip list
+     ```
+  
+  4. ```
+     $ pip install django
+     ```
+  
+  5. 프로젝트 폴더 생성 
+  
+     + python 이나 django에서 사용 중인 키워드 및 "-" (하이픈) 사용 불가
+  
+     ```
+     $ django-admin startproject config .
+     ```
+  
+  6. django 서버 실행
+  
+     ```
+     $ python manage.py runserver
+     ```
+  
+     
 
 
 
@@ -92,7 +122,7 @@
 
   * Project
 
-    * Project는 Application의 집합
+    * Project는 `Application`의 집합
     * 프로젝트에는 여러 앱(=기능)이 포함될 수 있음
     * 앱은 여러 프로젝트에 있을 수 있음
 

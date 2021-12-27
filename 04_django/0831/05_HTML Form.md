@@ -20,7 +20,7 @@
 
 * HTML “label” element 
 
-  * 사용자 인터페이스 항목에 대한 설명 ( 을 나타냄
+  * 사용자 인터페이스 항목에 대한 설명을 나타냄
   * label 을 input 요소와 연결하기
     1. input 에 `id` 속성 부여
     2. label 에는 input 의 id 와 동일한 값의 `for` 속성이 필요
@@ -56,7 +56,7 @@
 
   * 데이터를 가져올 때만 사용해야 함
 
-  * 데이터를 서버로 전송할 때 body 가 아닌 Query String Parameters 를 통해 전송
+  * 데이터를 서버로 전송할 때 body 가 아닌 `Query String Parameters` 를 통해 전송
 
     > ​	quert string parameters -> (= ?key=velue&)
 
