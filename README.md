@@ -20,3 +20,25 @@
 
 ### [04. django](04_django)
 
+---
+
+### [05. db](05_db)
+
+---
+
+### [06. javascript](06_javascript)
+
+---
+
+### [07. vue.js](07_vue.js)
+
+---
+
+### [08. typescript](08_typescript)
+
+---
+
+### [09. react](09_react)
+
+---
+
