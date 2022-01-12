@@ -33,4 +33,49 @@
     <Dice color="red" num={2} />
     ```
 
-    
+
+
+
+
+
+## children
+
+* children
+
+  * component의 자식들을 props로 받는것 
+  * 바로 보여질 값을 다룰 때 prop을 만드는 것 보다 *children* 을 만드는 것이 직관적으로 코드를 볼 수 있음
+  * 컴포넌트 안에 컴포넌트를 작성할 수도 있고 컴포넌트 안에 복잡한 태ㅡ들을 더 작성할 수 있음
+  
+  ```
+  # 하위 컴포넌트
+  
+  function Button({text}) {
+    return <button>{text}</button>;
+  }
+  
+  ⬇
+  
+  # children
+  
+  function Button({children}) {
+    return <button>{children}</button>;
+  }
+  ```
+  
+  ```
+  # 상위 컴포넌트
+  
+  <div>
+  	<Button text="던지기">
+  </div>
+  
+  ⬇
+  
+  # children
+  
+  <div>
+      <Button>던지기</Button>
+  </div>
+  ```
+  
+  
