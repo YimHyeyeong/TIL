@@ -22,6 +22,7 @@
     import pandas as pd
     
     two_dimensional_list = [['dongwook', 50, 86], ['sineui', 89, 31], ['ikjoong', 68, 91], ['yoonsoo', 88, 75]]
+    
     two_dimensional_array = np.array(two_dimensional_list)
     list_of_series = [
         pd.Series(['dongwook', 50, 86]), 
@@ -37,7 +38,7 @@
     
     print(df1)
     ```
-
+    
     > ```
     >           0   1   2
     > 0  dongwook  50  86
